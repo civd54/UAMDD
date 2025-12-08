@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue des Formations - UAMDD</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personnalisé -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/formations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation (identique à l'accueil) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo-uamdd.png" alt="UAMDD Logo" height="50">
+                <span class="brand-text">UAMDD</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="formationsDropdown" role="button" data-bs-toggle="dropdown">
+                            Formations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="?category=finance">Finance & Comptabilité</a></li>
+                            <li><a class="dropdown-item" href="?category=management">Management & Leadership</a></li>
+                            <li><a class="dropdown-item" href="?category=ingenierie">Ingénierie & Technologie</a></li>
+                            <li><a class="dropdown-item" href="?category=dd">Développement Durable</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#apropos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#public-cible">Pour qui ?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#partenariats">Partenariats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                    
+                    <li class="nav-item ms-lg-3">
+                        <a href="login.html" class="btn btn-outline-primary">Connexion</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a href="inscription.html" class="btn btn-primary">S'inscrire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Catalogue -->
+    <header class="catalogue-header py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Catalogue des Formations</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-5 fw-bold mb-3">Catalogue des Formations UAMDD</h1>
+                    <p class="lead mb-4">60+ formations certifiantes en ligne, adaptées aux réalités africaines et aux défis du développement durable</p>
+                    
+                    <div class="stats-bar d-flex flex-wrap gap-4">
+                        <div class="stat-item">
+                            <span class="stat-number">60+</span>
+                            <span class="stat-label">Formations</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Domaines</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">32h</span>
+                            <span class="stat-label">Durée moyenne</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">En ligne</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-lg-end">
+                    <div class="cta-box">
+                        <h5>Besoin d'aide pour choisir ?</h5>
+                        <p class="small">Nos conseillers pédagogiques sont à votre disposition</p>
+                        <a href="#contact" class="btn btn-outline-primary w-100">
+                            <i class="fas fa-comments me-2"></i>Demander un conseil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Principale Catalogue -->
+    <main class="catalogue-main py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Filtres -->
+                <aside class="col-lg-3 mb-4">
+                    <div class="filter-sidebar">
+                        <!-- Recherche -->
+                        <div class="filter-section">
+                            <h5 class="filter-title">
+                                <i class="fas fa-search me-2"></i>Recherche
+                            </h5>
+                            <div class="input-group mb-3">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Rechercher une formation...">
+                                <button class="btn btn-primary" type="button" id="searchBtn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Filtre par Domaine -->
+                        <div class="filter-section">
+                            <h5 class="filter-title">
+                                <i class="fas fa-filter me-2"></i>Domaine
+                            </h5>
+                            <div class="filter-options">
+                                <div class="form-check">
+                                    <input class="form-check-input domain-filter" type="checkbox" value="finance" id="filter-finance" checked>
+                                    <label class="form-check-label" for="filter-finance">
+                                        Finance & Comptabilité
+                                        <span class="badge bg-primary float-end">6</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input domain-filter" type="checkbox" value="management" id="filter-management" checked>
+                                    <label class="form-check-label" for="filter-management">
+                                        Management & Leadership
+                                        <span class="badge bg-primary float-end">25</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input domain-filter" type="checkbox" value="ingenierie" id="filter-ingenierie" checked>
+                                    <label class="form-check-label" for="filter-ingenierie">
+                                        Ingénierie & Technologie
+                                        <span class="badge bg-primary float-end">18</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input domain-filter" type="checkbox" value="dd" id="filter-dd" checked>
+                                    <label class="form-check-label" for="filter-dd">
+                                        Développement Durable
+                                        <span class="badge bg-primary float-end">11</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filtre par Durée -->
+                        <div class="filter-section">
+                            <h5 class="filter-title">
+                                <i class="fas fa-clock me-2"></i>Durée
+                            </h5>
+                            <div class="filter-options">
+                                <div class="form-check">
+                                    <input class="form-check-input duration-filter" type="checkbox" value="20" id="filter-20h">
+                                    <label class="form-check-label" for="filter-20h">
+                                        20 heures
+                                        <span class="badge bg-secondary float-end">1</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input duration-filter" type="checkbox" value="32" id="filter-32h" checked>
+                                    <label class="form-check-label" for="filter-32h">
+                                        32 heures
+                                        <span class="badge bg-secondary float-end">58</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input duration-filter" type="checkbox" value="60" id="filter-60h">
+                                    <label class="form-check-label" for="filter-60h">
+                                        2 mois (60h)
+                                        <span class="badge bg-secondary float-end">3</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filtre par Prix -->
+                        <div class="filter-section">
+                            <h5 class="filter-title">
+                                <i class="fas fa-tag me-2"></i>Tarif (MAD)
+                            </h5>
+                            <div class="filter-options">
+                                <div class="form-check">
+                                    <input class="form-check-input price-filter" type="checkbox" value="gratuit" id="filter-gratuit">
+                                    <label class="form-check-label" for="filter-gratuit">
+                                        Gratuit
+                                        <span class="badge bg-success float-end">1</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input price-filter" type="checkbox" value="3000-5900" id="filter-3000">
+                                    <label class="form-check-label" for="filter-3000">
+                                        3,000 - 5,900 MAD
+                                        <span class="badge bg-secondary float-end">58</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input price-filter" type="checkbox" value="6000" id="filter-6000">
+                                    <label class="form-check-label" for="filter-6000">
+                                        6,000 MAD
+                                        <span class="badge bg-secondary float-end">4</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filtre Certification -->
+                        <div class="filter-section">
+                            <h5 class="filter-title">
+                                <i class="fas fa-certificate me-2"></i>Certification
+                            </h5>
+                            <div class="filter-options">
+                                <div class="form-check">
+                                    <input class="form-check-input cert-filter" type="checkbox" value="certifiante" id="filter-cert" checked>
+                                    <label class="form-check-label" for="filter-cert">
+                                        Formations certifiantes
+                                        <span class="badge bg-warning float-end">60</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cert-filter" type="checkbox" value="preparation" id="filter-prep">
+                                    <label class="form-check-label" for="filter-prep">
+                                        Préparation certification
+                                        <span class="badge bg-warning float-end">4</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Boutons Actions -->
+                        <div class="filter-actions mt-4">
+                            <button class="btn btn-primary w-100 mb-2" id="applyFilters">
+                                <i class="fas fa-filter me-2"></i>Appliquer les filtres
+                            </button>
+                            <button class="btn btn-outline-secondary w-100" id="resetFilters">
+                                <i class="fas fa-redo me-2"></i>Réinitialiser
+                            </button>
+                        </div>
+
+                        <!-- Comparateur -->
+                        <div class="comparator-section mt-4 p-3 bg-light rounded">
+                            <h6><i class="fas fa-balance-scale me-2"></i>Comparateur</h6>
+                            <p class="small">Sélectionnez jusqu'à 3 formations pour les comparer</p>
+                            <div id="comparatorList"></div>
+                            <button class="btn btn-sm btn-outline-primary w-100 mt-2" id="compareBtn" disabled>
+                                <i class="fas fa-chart-bar me-1"></i>Comparer (0)
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Contenu Principal -->
+                <div class="col-lg-9">
+                    <!-- Barre de Contrôle -->
+                    <div class="control-bar mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="results-info">
+                                    <span id="resultsCount">60</span> formations trouvées
+                                    <span id="selectedCount" class="badge bg-info ms-2 d-none">0 sélectionnées</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="sort-dropdown">
+                                        <label for="sortSelect" class="form-label mb-0 me-2">Trier par :</label>
+                                        <select class="form-select form-select-sm" id="sortSelect">
+                                            <option value="popularite">Popularité</option>
+                                            <option value="tarif-croissant">Prix croissant</option>
+                                            <option value="tarif-dec">Prix décroissant</option>
+                                            <option value="duree">Durée</option>
+                                            <option value="alphabetique">Ordre alphabétique</option>
+                                        </select>
+                                    </div>
+                                    <div class="view-toggle">
+                                        <button class="btn btn-sm btn-outline-secondary active" id="gridView">
+                                            <i class="fas fa-th-large"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-secondary" id="listView">
+                                            <i class="fas fa-list"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Affichage des Formations -->
+                    <div class="formations-container">
+                        <div class="row" id="formationsGrid">
+                            <!-- Les formations seront chargées ici -->
+                        </div>
+                        
+                        <!-- Aucun résultat -->
+                        <div id="noResults" class="text-center py-5 d-none">
+                            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                            <h4>Aucune formation ne correspond à vos critères</h4>
+                            <p class="text-muted">Essayez de modifier vos filtres ou votre recherche</p>
+                            <button class="btn btn-primary" id="resetAllFilters">
+                                <i class="fas fa-redo me-2"></i>Réinitialiser tous les filtres
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Pagination" class="mt-5">
+                        <ul class="pagination justify-content-center" id="pagination">
+                            <!-- Générée dynamiquement -->
+                        </ul>
+                    </nav>
+
+                    <!-- Section Comparaison (Modal) -->
+                    <div class="comparison-modal">
+                        <!-- Sera générée dynamiquement -->
+                    </div>
+
+                    <!-- Info Certifications -->
+                    <div class="certification-info mt-5 p-4 bg-light rounded">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center">
+                                <i class="fas fa-award fa-3x text-primary"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h5>Toutes nos formations sont certifiantes</h5>
+                                <p class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Certificat numérique avec QR code de vérification
+                                </p>
+                                <p class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Ajout direct à votre profil LinkedIn
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Reconnaissance internationale
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-catalogue py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Vous ne trouvez pas la formation idéale ?</h2>
+            <p class="mb-4">Nos conseillers pédagogiques peuvent vous orienter vers le programme le plus adapté à vos objectifs</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-light btn-lg me-3">
+                    <i class="fas fa-comments me-2"></i>Contactez-nous
+                </a>
+                <a href="tel:+221331234567" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>Appelez-nous
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (identique à l'accueil) -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="../assets/images/logo-uamdd-white.png" alt="UAMDD Logo" height="50">
+                    <p class="mt-3">
+                        Université Africaine du Management et du Développement Durable.<br>
+                        Excellence, Innovation, Impact Panafricain.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5>Formations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="?category=finance" class="text-white-50">Finance</a></li>
+                        <li><a href="?category=management" class="text-white-50">Management</a></li>
+                        <li><a href="?category=ingenierie" class="text-white-50">Ingénierie</a></li>
+                        <li><a href="?category=dd" class="text-white-50">Développement Durable</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5>Université</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html#apropos" class="text-white-50">À propos</a></li>
+                        <li><a href="../index.html#public-cible" class="text-white-50">Public cible</a></li>
+                        <li><a href="../index.html#partenariats" class="text-white-50">Partenariats</a></li>
+                        <li><a href="../index.html#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact & Support</h5>
+                    <p><i class="fas fa-envelope me-2"></i> contact@uamdd.org</p>
+                    <p><i class="fas fa-phone me-2"></i> +221 33 123 45 67</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Dakar, Sénégal</p>
+                    
+                    <div class="newsletter mt-4">
+                        <h6>Restez informés</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre email">
+                            <button class="btn btn-primary" type="button">S'abonner</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 UAMDD. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Mentions légales</a>
+                    <a href="#" class="text-white-50">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Comparaison -->
+    <div class="modal fade" id="comparisonModal" tabindex="-1" aria-labelledby="comparisonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="comparisonModalLabel">
+                        <i class="fas fa-balance-scale me-2"></i>Comparaison des Formations
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="comparisonContent">
+                        <!-- Contenu généré dynamiquement -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary" id="sendComparison">
+                        <i class="fas fa-envelope me-2"></i>Envoyer cette comparaison par email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/formations-data.js"></script>
+    <script src="../js/catalogue.js"></script>
+</body>
+</html>
