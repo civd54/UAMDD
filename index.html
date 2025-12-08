@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAMDD - Université Africaine du Management et Développement Durable</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personnalisé -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo-uamdd.png" alt="UAMDD Logo" height="50">
+                <span class="brand-text">UAMDD</span>
+            </a>
+            
+            <!-- Menu Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu Principal -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="formationsDropdown" role="button" data-bs-toggle="dropdown">
+                            Formations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="formations.html?category=finance">Finance & Comptabilité</a></li>
+                            <li><a class="dropdown-item" href="formations.html?category=management">Management & Leadership</a></li>
+                            <li><a class="dropdown-item" href="formations.html?category=ingenierie">Ingénierie & Technologie</a></li>
+                            <li><a class="dropdown-item" href="formations.html?category=dd">Développement Durable</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#public-cible">Pour qui ?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partenariats">Partenariats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    
+                    <!-- Boutons Connexion/Inscription -->
+                    <li class="nav-item ms-lg-3">
+                        <a href="login.html" class="btn btn-outline-primary">Connexion</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a href="inscription.html" class="btn btn-primary">S'inscrire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Mise à jour avec la Vision -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">
+                        Référence Panafricaine du <span class="highlight">Management</span> et <span class="highlight">Développement Durable</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Université Africaine du Management et du Développement Durable
+                    </p>
+                    <p class="hero-description">
+                        Nous formons la génération de leaders éthiques et décideurs responsables capables de transformer 
+                        durablement les économies africaines et contribuer aux Objectifs de Développement Durable.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="formations.html" class="btn btn-primary btn-lg">
+                            Explorer nos formations <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#apropos" class="btn btn-outline-primary btn-lg ms-3">
+                            Notre Vision
+                        </a>
+                    </div>
+                    
+                    <!-- Stats actualisées -->
+                    <div class="hero-stats mt-5">
+                        <div class="row">
+                            <div class="col-4">
+                                <h3 class="stat-number">60+</h3>
+                                <p class="stat-label">Formations Certifiantes</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="stat-number">5,000+</h3>
+                                <p class="stat-label">Apprenants Actifs</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="stat-number">15,000</h3>
+                                <p class="stat-label">Objectif 2035</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="assets/images/hero-illustration.svg" alt="Leadership Africain" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section : Nos 4 Piliers Stratégiques -->
+    <section class="pillars-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Nos Piliers Stratégiques</h2>
+                <p class="text-muted">4 domaines d'intervention pour un impact durable</p>
+            </div>
+            
+            <div class="row">
+                <!-- Pilier 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <h4>Management, Gouvernance et Leadership éthique</h4>
+                        <ul class="pillar-list">
+                            <li>Gestion d'entreprise</li>
+                            <li>Management public</li>
+                            <li>Innovation organisationnelle</li>
+                            <li>Économie sociale et solidaire</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pilier 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Développement Durable et Transition Écologique</h4>
+                        <ul class="pillar-list">
+                            <li>Énergies renouvelables</li>
+                            <li>Économie circulaire</li>
+                            <li>Gestion des ressources</li>
+                            <li>Climat et résilience</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pilier 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>Innovation et Transformation Numérique</h4>
+                        <ul class="pillar-list">
+                            <li>AgriTech & GreenTech</li>
+                            <li>EdTech</li>
+                            <li>Entrepreneuriat numérique</li>
+                            <li>Systèmes d'information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pilier 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Sciences Sociales et Développement Humain</h4>
+                        <ul class="pillar-list">
+                            <li>Éducation et inclusion</li>
+                            <li>Égalité des genres</li>
+                            <li>Santé communautaire</li>
+                            <li>Culture et cohésion sociale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catégories de Formations (conservé mais amélioré) -->
+    <section class="categories-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Nos Domaines de Formation</h2>
+                <p class="text-muted">Choisissez parmi notre catalogue de 60+ formations certifiantes</p>
+            </div>
+            
+            <div class="row">
+                <!-- Finance -->
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="formations.html?category=finance" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Finance & Comptabilité</h4>
+                        <p class="mb-2">6 formations</p>
+                        <small class="text-primary">À partir de 5,900 MAD</small>
+                    </a>
+                </div>
+                
+                <!-- Management -->
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="formations.html?category=management" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Management & Leadership</h4>
+                        <p class="mb-2">25 formations</p>
+                        <small class="text-primary">À partir de 3,000 MAD</small>
+                    </a>
+                </div>
+                
+                <!-- Ingénierie -->
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="formations.html?category=ingenierie" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Ingénierie & Technologie</h4>
+                        <p class="mb-2">18 formations</p>
+                        <small class="text-primary">À partir de 5,900 MAD</small>
+                    </a>
+                </div>
+                
+                <!-- Développement Durable -->
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="formations.html?category=dd" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h4>Développement Durable</h4>
+                        <p class="mb-2">11 formations</p>
+                        <small class="text-primary">Formations certifiantes</small>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="formations.html" class="btn btn-outline-primary">
+                    Voir tout le catalogue (60+ formations) <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- À Propos - Section enrichie -->
+    <section id="apropos" class="about-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>L'UAMDD en détails</h2>
+                <p class="text-muted">Notre vision, mission et approche pédagogique</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Notre Vision</h3>
+                        <p>
+                            Devenir une référence panafricaine de l'enseignement supérieur, de la recherche appliquée 
+                            et de l'innovation au service d'un développement durable, inclusif et résilient. Former 
+                            une génération de leaders éthiques capables de transformer durablement les économies africaines.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <h3>Notre Mission</h3>
+                        <p>
+                            Former, accompagner et valoriser les talents africains dans les domaines du management, 
+                            de la gouvernance, de l'entrepreneuriat et de la durabilité environnementale. Promouvoir 
+                            un enseignement ancré dans les réalités africaines, fondé sur l'excellence académique et 
+                            la recherche-action.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Approche pédagogique -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="pedagogy-card">
+                        <h3 class="text-center mb-4"><i class="fas fa-graduation-cap me-2"></i>Notre Approche Pédagogique</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="pedagogy-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <h5>Contextualisée</h5>
+                                    <p>Études de cas africains et simulations réelles</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pedagogy-item">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <h5>Pratique</h5>
+                                    <p>Apprentissage par projet et mise en situation</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pedagogy-item">
+                                    <i class="fas fa-language"></i>
+                                    <h5>Multilingue</h5>
+                                    <p>Ressources en français, anglais et langues africaines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Public Cible -->
+    <section id="public-cible" class="target-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Pour qui ?</h2>
+                <p class="text-muted">Notre public cible</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="target-card">
+                        <div class="target-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h5>Étudiants & Jeunes diplômés</h5>
+                        <p>Spécialisation en développement durable</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="target-card">
+                        <div class="target-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h5>Professionnels & Cadres</h5>
+                        <p>Reconversion ou perfectionnement</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="target-card">
+                        <div class="target-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h5>Entrepreneurs & Innovateurs</h5>
+                        <p>Porteurs de projets à impact</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="target-card">
+                        <div class="target-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h5>Enseignants & Chercheurs</h5>
+                        <p>Recherche appliquée africaine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Offre de Formation -->
+    <section class="offer-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Notre Offre Académique</h2>
+                <p class="text-muted">Structurée en 3 niveaux flexibles</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="offer-card">
+                        <div class="offer-level">Niveau 1</div>
+                        <h3>Certificats Professionnels</h3>
+                        <ul class="offer-list">
+                            <li><i class="fas fa-check text-success"></i> Formations courtes et pratiques</li>
+                            <li><i class="fas fa-check text-success"></i> Orientées compétences</li>
+                            <li><i class="fas fa-check text-success"></i> Solutions locales concrètes</li>
+                            <li><i class="fas fa-check text-success"></i> Durée : 20h à 32h</li>
+                        </ul>
+                        <div class="offer-price">À partir de 3,000 MAD</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="offer-card">
+                        <div class="offer-level">Niveau 2</div>
+                        <h3>Licences Professionnelles</h3>
+                        <ul class="offer-list">
+                            <li><i class="fas fa-check text-success"></i> Parcours diplômants</li>
+                            <li><i class="fas fa-check text-success"></i> Métiers du management durable</li>
+                            <li><i class="fas fa-check text-success"></i> Gestion de projets</li>
+                            <li><i class="fas fa-check text-success"></i> Entrepreneuriat vert</li>
+                        </ul>
+                        <div class="offer-price">Formations complètes</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="offer-card">
+                        <div class="offer-level">Niveau 3</div>
+                        <h3>Masters & MBA</h3>
+                        <ul class="offer-list">
+                            <li><i class="fas fa-check text-success"></i> Management du DD</li>
+                            <li><i class="fas fa-check text-success"></i> Pour cadres & décideurs</li>
+                            <li><i class="fas fa-check text-success"></i> Projets d'impact</li>
+                            <li><i class="fas fa-check text-success"></i> Approche executive</li>
+                        </ul>
+                        <div class="offer-price">Programmes avancés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Partenariats -->
+    <section id="partenariats" class="partners-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Nos Partenariats</h2>
+                <p class="text-muted">Approche collaborative et co-construction du savoir</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="partner-card">
+                        <h4><i class="fas fa-university text-primary me-2"></i>Académiques</h4>
+                        <p>Universités et écoles africaines et internationales</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="partner-card">
+                        <h4><i class="fas fa-handshake text-primary me-2"></i>Techniques</h4>
+                        <p>Agences de développement, ONG, institutions multilatérales</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="partner-card">
+                        <h4><i class="fas fa-industry text-primary me-2"></i>Secteur Privé</h4>
+                        <p>Incubateurs, clusters, hubs d'innovation verte</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Populaires (conservé) -->
+    <section class="formations-section py-5">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center mb-5">
+                <div>
+                    <h2>Formations les plus demandées</h2>
+                    <p class="text-muted">Découvrez nos formations phares</p>
+                </div>
+                <a href="formations.html" class="btn btn-outline-primary">
+                    Toutes les formations <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+            
+            <div class="row" id="popular-courses">
+                <!-- Les formations seront chargées dynamiquement via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Impact -->
+    <section class="impact-section py-5 bg-primary text-white">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Notre Impact</h2>
+                <p>Ambitions et résultats attendus d'ici 2035</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="impact-number">15,000+</div>
+                    <h5>Apprenants formés</h5>
+                    <p>Issus de tous les pays africains</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="impact-number">60+</div>
+                    <h5>Formations certifiantes</h5>
+                    <p>Dans 4 domaines d'excellence</p>
+                </div>
+                
+                <div class="col-md-4 text-center mb-4">
+                    <div class="impact-number">100%</div>
+                    <h5>Accessibilité numérique</h5>
+                    <p>Plateforme e-learning 24h/24</p>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="impact-goals">
+                        <h4 class="text-center mb-4">Objectifs stratégiques :</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="impact-list">
+                                    <li><i class="fas fa-check-circle"></i> Professionnalisation des acteurs du DD</li>
+                                    <li><i class="fas fa-check-circle"></i> Écosystème d'innovation et recherche appliquée</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="impact-list">
+                                    <li><i class="fas fa-check-circle"></i> Création d'emplois verts et entreprises sociales</li>
+                                    <li><i class="fas fa-check-circle"></i> Culture du management responsable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages (conservé) -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Ce que disent nos apprenants</h2>
+                <p class="text-muted">Témoignages de notre communauté panafricaine</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Les études de cas africains m'ont permis d'appliquer immédiatement les concepts dans mon entreprise."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/images/avatar1.jpg" alt="Aminata Diallo">
+                            <div>
+                                <h5>Aminata Diallo</h5>
+                                <p>Responsable Finance, Dakar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Le certificat UAMDD m'a ouvert les portes de plusieurs multinationales au Maroc."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/images/avatar2.jpg" alt="Jean Koffi">
+                            <div>
+                                <h5>Jean Koffi</h5>
+                                <p>Manager, Abidjan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "L'approche pratique et les outils concrets m'ont permis de lancer mon projet d'économie circulaire."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/images/avatar3.jpg" alt="Fatou Bâ">
+                            <div>
+                                <h5>Fatou Bâ</h5>
+                                <p>Entrepreneure, Bamako</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Prêt à rejoindre la nouvelle génération de leaders africains ?</h2>
+            <p class="mb-4">Formez-vous aux métiers d'avenir et contribuez au développement durable du continent</p>
+            <div class="cta-buttons">
+                <a href="inscription.html" class="btn btn-primary btn-lg me-3">
+                    Commencer maintenant <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+                <a href="formations.html" class="btn btn-outline-light btn-lg">
+                    Explorer les formations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (conservé) -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="assets/images/logo-uamdd-white.png" alt="UAMDD Logo" height="50">
+                    <p class="mt-3">
+                        Université Africaine du Management et du Développement Durable.<br>
+                        Excellence, Innovation, Impact Panafricain.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5>Formations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="formations.html?category=finance" class="text-white-50">Finance</a></li>
+                        <li><a href="formations.html?category=management" class="text-white-50">Management</a></li>
+                        <li><a href="formations.html?category=ingenierie" class="text-white-50">Ingénierie</a></li>
+                        <li><a href="formations.html?category=dd" class="text-white-50">Développement Durable</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5>Université</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#apropos" class="text-white-50">À propos</a></li>
+                        <li><a href="#public-cible" class="text-white-50">Public cible</a></li>
+                        <li><a href="#partenariats" class="text-white-50">Partenariats</a></li>
+                        <li><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact & Support</h5>
+                    <p><i class="fas fa-envelope me-2"></i> contact@uamdd.org</p>
+                    <p><i class="fas fa-phone me-2"></i> +221 33 123 45 67</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Dakar, Sénégal</p>
+                    
+                    <div class="newsletter mt-4">
+                        <h6>Restez informés</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre email">
+                            <button class="btn btn-primary" type="button">S'abonner</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 UAMDD. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Mentions légales</a>
+                    <a href="#" class="text-white-50">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/formations-data.js"></script>
+</body>
+</html>
