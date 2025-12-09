@@ -1,11 +1,11 @@
 :root {
     /* Couleurs primaires - Inspiration FAO */
-    --primary-color: #0066B3;
-    --primary-dark: #005293;
-    --primary-light: #4D8FC8;
+    --primary-color: #DA0434;
+    --primary-dark: #A30226;
+    --primary-light: #FF6F61;
     
     /* Couleurs secondaires */
-    --secondary-color: #FF6B35;
+    --secondary-color: #005A9C;
     --success-color: #28a745;
     --warning-color: #ffc107;
     --danger-color: #dc3545;

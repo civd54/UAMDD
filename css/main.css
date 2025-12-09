@@ -55,6 +55,10 @@ a:hover {
     padding: 0.5rem 1rem !important;
 }
 
+.navbar img {
+    height: 60px;
+}
+
 /* Hero Section */
 .hero-section {
     padding: 6rem 0 4rem;
